@@ -20,9 +20,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2 #checkout 代码
 
-      - name: Setup provisioning profile
-        run: |
-          exec .github/scripts/set-env-from-xcodeproj.sh
       - uses: yukiarrr/ios-build-action@v1.3.0
         with:
             project-path: ActionsTest.xcodeproj
@@ -33,21 +30,4 @@ jobs:
             code-signing-identity: ${{ secrets.CODE_SIGNING_IDENTITY }}
             team-id: ${{ secrets.TEAM_ID }}
             export-method: 'development'
-#      - name: Import signing certificate
-#        env:
-#          SIGNING_CERTIFICATE_P12_DATA: ${{ secrets.SIGNING_CERTIFICATE_P12_DATA }}
-#          SIGNING_CERTIFICATE_PASSWORD: ${{ secrets.SIGNING_CERTIFICATE_PASSWORD }}
-#        run: |
-#          exec .github/scripts/import-certificate.sh
-#
-#      - name: Import provisioning profile
-#        env:
-#          PROVISIONING_PROFILE_DATA: ${{ secrets.PROVISIONING_PROFILE_DATA }}
-#        run: |
-#          exec .github/scripts/import-profile.sh
 
-#      - name: Archiving project
-#        run: ./.github/scripts/archive_app.sh
-#
-#      - name: Exporting ipa
-#        run: ./.github/scripts/export_ipa.sh
