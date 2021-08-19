@@ -9,28 +9,45 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-
+    
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
     runs-on: macos-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2 #checkout 代码
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - name: Setup provisioning profile
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          exec .github/scripts/set-env-from-xcodeproj.sh
+      - uses: yukiarrr/ios-build-action@v1.3.0
+        with:
+            project-path: ActionsTest.xcodeproj
+#            workspace-path: ActionsTest.xcworkspace # optional
+            certificate-password: ${{ secrets.SIGNING_CERTIFICATE_PASSWORD }}
+            p12-base64: ${{ secrets.SIGNING_CERTIFICATE_P12_DATA }}
+            mobileprovision-base64: ${{ secrets.MOBILEPROVISION_BASE64 }}
+            code-signing-identity: ${{ secrets.CODE_SIGNING_IDENTITY }}
+            team-id: ${{ secrets.TEAM_ID }}
+            export-method: 'development'
+#      - name: Import signing certificate
+#        env:
+#          SIGNING_CERTIFICATE_P12_DATA: ${{ secrets.SIGNING_CERTIFICATE_P12_DATA }}
+#          SIGNING_CERTIFICATE_PASSWORD: ${{ secrets.SIGNING_CERTIFICATE_PASSWORD }}
+#        run: |
+#          exec .github/scripts/import-certificate.sh
+#
+#      - name: Import provisioning profile
+#        env:
+#          PROVISIONING_PROFILE_DATA: ${{ secrets.PROVISIONING_PROFILE_DATA }}
+#        run: |
+#          exec .github/scripts/import-profile.sh
+
+#      - name: Archiving project
+#        run: ./.github/scripts/archive_app.sh
+#
+#      - name: Exporting ipa
+#        run: ./.github/scripts/export_ipa.sh
