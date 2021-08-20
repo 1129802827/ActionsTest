@@ -30,4 +30,5 @@ jobs:
             code-signing-identity: ${{ secrets.CODE_SIGNING_IDENTITY }}
             team-id: ${{ secrets.TEAM_ID }}
             export-method: 'development'
-
+            
+      - uses: actions/download-artifact@v2
