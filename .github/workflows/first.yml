@@ -15,7 +15,7 @@ on:
 
 jobs:
   build:
-    runs-on: [self-hosted,macOS,X64]
+    runs-on: self-hosted
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2 #checkout 代码
