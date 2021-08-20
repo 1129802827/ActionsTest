@@ -30,6 +30,14 @@
     [btn1 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     btn1.frame = CGRectMake(250, 250, 100, 100);
     [self.view addSubview:btn1];
+    
+    [super viewDidLoad];
+    UIButton *btn2 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn2 setTitle:@"再修改" forState: UIControlStateNormal];
+    btn2.backgroundColor = UIColor.redColor;
+    [btn2 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    btn2.frame = CGRectMake(150, 450, 100, 100);
+    [self.view addSubview:btn2];
 }
 
 
