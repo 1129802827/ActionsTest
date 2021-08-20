@@ -15,11 +15,14 @@ on:
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: [self-hosted,macOS,X64]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2 #checkout 代码
-
+        
+      - name: Run a one-line script
+        run: echo Hello, world!
+        
       - uses: yukiarrr/ios-build-action@v1.4.0
         with:
             project-path: ActionsTest.xcodeproj
