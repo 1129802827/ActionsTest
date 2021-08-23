@@ -6,6 +6,6 @@ target 'ActionsTest' do
   use_frameworks!
 
   # Pods for ActionsTest
-	#pod 'Masonry', '~> 1.1.0'
+	pod 'Masonry', '~> 1.1.0'
 
 end
