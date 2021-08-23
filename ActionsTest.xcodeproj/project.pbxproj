@@ -3,13 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		7C98C63C7493A14F3D44B9A5 /* Pods_ActionsTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22FF2B7C4D3CFB5ABFB095FA /* Pods_ActionsTest.framework */; };
 		BC27EC4126CE088800EC12D1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC27EC4026CE088800EC12D1 /* AppDelegate.m */; };
-		BC27EC4426CE088800EC12D1 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC27EC4326CE088800EC12D1 /* SceneDelegate.m */; };
 		BC27EC4726CE088800EC12D1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC27EC4626CE088800EC12D1 /* ViewController.m */; };
 		BC27EC4A26CE088800EC12D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC27EC4826CE088800EC12D1 /* Main.storyboard */; };
 		BC27EC4C26CE088800EC12D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC27EC4B26CE088800EC12D1 /* Assets.xcassets */; };
@@ -43,8 +42,6 @@
 		BC27EC3C26CE088800EC12D1 /* ActionsTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActionsTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC27EC3F26CE088800EC12D1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BC27EC4026CE088800EC12D1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BC27EC4226CE088800EC12D1 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		BC27EC4326CE088800EC12D1 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		BC27EC4526CE088800EC12D1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		BC27EC4626CE088800EC12D1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		BC27EC4926CE088800EC12D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -92,7 +89,6 @@
 				275FC5B85727BA496C6B794E /* Pods-ActionsTest.debug.xcconfig */,
 				9013DE11574DBEC6FAE4D2DC /* Pods-ActionsTest.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -123,8 +119,6 @@
 			children = (
 				BC27EC3F26CE088800EC12D1 /* AppDelegate.h */,
 				BC27EC4026CE088800EC12D1 /* AppDelegate.m */,
-				BC27EC4226CE088800EC12D1 /* SceneDelegate.h */,
-				BC27EC4326CE088800EC12D1 /* SceneDelegate.m */,
 				BC27EC4526CE088800EC12D1 /* ViewController.h */,
 				BC27EC4626CE088800EC12D1 /* ViewController.m */,
 				BC27EC4826CE088800EC12D1 /* Main.storyboard */,
@@ -338,7 +332,6 @@
 				BC27EC4726CE088800EC12D1 /* ViewController.m in Sources */,
 				BC27EC4126CE088800EC12D1 /* AppDelegate.m in Sources */,
 				BC27EC5226CE088800EC12D1 /* main.m in Sources */,
-				BC27EC4426CE088800EC12D1 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
