@@ -23,7 +23,7 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
         
-      - uses: yukiarrr/ios-build-action@v1.3.0
+      - uses: yukiarrr/ios-build-action@v1.4.0
         with:
             project-path: ActionsTest.xcodeproj
 #            workspace-path: ActionsTest.xcworkspace # optional
