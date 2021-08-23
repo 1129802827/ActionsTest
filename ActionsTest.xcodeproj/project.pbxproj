@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -167,7 +167,6 @@
 				BC27EC3826CE088800EC12D1 /* Sources */,
 				BC27EC3926CE088800EC12D1 /* Frameworks */,
 				BC27EC3A26CE088800EC12D1 /* Resources */,
-				185F89D5A2260291A5164DBC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -283,23 +282,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		185F89D5A2260291A5164DBC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ActionsTest/Pods-ActionsTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ActionsTest/Pods-ActionsTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ActionsTest/Pods-ActionsTest-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		71A54BF9FF2D52F3F17E3079 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -504,7 +486,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development: Xian Zhou (4HU553XF99)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = SY2N3S55A6;
 				INFOPLIST_FILE = ActionsTest/Info.plist;
@@ -526,7 +508,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development: Xian Zhou (4HU553XF99)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = SY2N3S55A6;
 				INFOPLIST_FILE = ActionsTest/Info.plist;
