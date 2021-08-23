@@ -28,8 +28,8 @@ jobs:
         
       - uses: yukiarrr/ios-build-action@v1.4.0
         with:
-            project-path: ActionsTest.xcodeproj
-#            workspace-path: ActionsTest.xcworkspace # optional
+#            project-path: ActionsTest.xcodeproj
+            workspace-path: ActionsTest.xcworkspace # optional
             p12-key-base64: ${{ secrets.P12_KEY_BASE64 }}
             p12-cer-base64: ${{ secrets.P12_CER_BASE64 }}
             mobileprovision-base64: ${{ secrets.MOBILEPROVISION_BASE64 }}
