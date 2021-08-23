@@ -20,8 +20,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2 #checkout 代码
         
-      - name: Run a one-line script
-        run: echo Hello, world!
+      - name: Pod install
+        run: pod install
+        
+#      - name: Run a one-line script
+#        run: echo Hello, world!
         
       - uses: yukiarrr/ios-build-action@v1.4.0
         with:
