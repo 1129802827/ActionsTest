@@ -506,16 +506,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 678MZVH5SX;
+				DEVELOPMENT_TEAM = SY2N3S55A6;
 				INFOPLIST_FILE = ActionsTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hashkey.me;
+				PRODUCT_BUNDLE_IDENTIFIER = HK.QA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "HashKey Me Dev";
+				PROVISIONING_PROFILE_SPECIFIER = HK.QA;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -535,7 +535,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hashkey.me;
+				PRODUCT_BUNDLE_IDENTIFIER = HK.QA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "HashKey Me Dev";
 				TARGETED_DEVICE_FAMILY = "1,2";
