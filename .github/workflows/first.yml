@@ -35,7 +35,6 @@ jobs:
         id: path
         run: echo "::set-output name=path::${{ github.workspace }}/${{ steps.date.outputs.date }}/${{ github.run_number }}/me.ipa"
 
-        
       - uses: yukiarrr/ios-build-action@v1.4.0
         with:
             project-path: ActionsTest.xcodeproj
@@ -48,6 +47,6 @@ jobs:
             export-method: 'development'
             output-path:${{ steps.path.outputs.path }}
             
-       - name: push to fir
-         id: PushToFir
-         run: curl -F file=@${{ steps.date.outputs.date }} -F '_api_key=ae0aac62cabfbd64173ee7af786d051d' https://www.pgyer.com/apiv2/app/upload
+      - name: push to fir
+        id: PushToFir
+        run: curl -F file=@${{ steps.date.outputs.date }} -F '_api_key=ae0aac62cabfbd64173ee7af786d051d' https://www.pgyer.com/apiv2/app/upload
