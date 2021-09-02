@@ -34,7 +34,7 @@ jobs:
       - uses: yukiarrr/ios-build-action@v1.4.0
         with:
             project-path: ActionsTest.xcodeproj
-            workspace-path: ActionsTest.xcworkspace 
+            workspace-path: ActionsTest.xcworkspace
             p12-key-base64: ${{ secrets.P12_KEY_BASE64 }}
             p12-cer-base64: ${{ secrets.P12_CER_BASE64 }}
             mobileprovision-base64: ${{ secrets.MOBILEPROVISION_BASE64 }}
@@ -46,5 +46,5 @@ jobs:
             
       - name: push to fir
         id: PushToFir
-        run: curl -F file=@/output.ipa -F '_api_key=ae0aac62cabfbd64173ee7af786d051d' https://www.pgyer.com/apiv2/app/upload
+        run: curl -F file=@${{ github.workspace }}/output.ipa -F '_api_key=ae0aac62cabfbd64173ee7af786d051d' https://www.pgyer.com/apiv2/app/upload
 #        run: curl -F file=@${{ steps.path.outputs.path }} -F '_api_key=ae0aac62cabfbd64173ee7af786d051d' https://www.pgyer.com/apiv2/app/upload
