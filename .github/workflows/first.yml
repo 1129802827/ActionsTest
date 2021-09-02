@@ -45,7 +45,7 @@ jobs:
             code-signing-identity: ${{ secrets.CODE_SIGNING_IDENTITY }}
             team-id: ${{ secrets.TEAM_ID }}
             export-method: 'development'
-            output-path:${{ steps.path.outputs.path }}
+            output-path: ${{ steps.path.outputs.path }}
             
       - name: push to fir
         id: PushToFir
