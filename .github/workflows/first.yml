@@ -26,7 +26,9 @@ jobs:
       - name: Get current path
         id: date
         run: |
+          echo github.action_path
           echo ${{ github.action_path }}
+          echo github.workspace
           echo ${{ github.workspace }}
         
       - uses: yukiarrr/ios-build-action@v1.4.0
