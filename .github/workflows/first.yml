@@ -23,8 +23,11 @@ jobs:
       - name: Pod install
         run: pod install
         
-#      - name: Run a one-line script
-#        run: echo Hello, world!
+      - name: Get current path
+        id: date
+        run: |
+          echo ${{ github.action_path }}
+          echo ${{ github.workspace }}
         
       - uses: yukiarrr/ios-build-action@v1.4.0
         with:
